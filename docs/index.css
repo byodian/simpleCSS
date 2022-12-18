@@ -1,0 +1,155 @@
+@import url("./animations.css");
+
+:root {
+  --text-color: #434343;
+  --border-color: #d2d2d2;
+  --bg-color: #fff;
+  --action-bg-color: #f9f7f7;
+  --primary-gradient: linear-gradient(150deg, #93f3f3, #d3a9f2);
+  --primary-h: 90;
+  --primary-s: 50%;
+  --primary-b: 60%;
+}
+
+.dark-mode {
+  --text-color: #fff;
+  --border-color: #434343;
+  --bg-color: #434343;
+  --action-bg-color: #434343;
+  --primary-gradient: linear-gradient(150deg, #235ad1, #23d1a8);
+  --primary-h: 50;
+  --primary-s: 90%;
+  --primary-b: 60%;
+}
+
+html {
+  font-size: 65%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.heading {
+  color: var(--text-color);
+}
+
+.item {
+  --text-color: #cdcd00;
+
+  color: var(--text-color);
+}
+
+.two {
+  --text-color: #f000f0;
+}
+
+.three {
+  --text-color: #00f000;
+}
+
+/* button */
+.button {
+  --unit: 1rem;
+
+  padding: var(--unit);
+  color: var(--text-color);
+  background-color: hsl(var(--primary-h) var(--primary-s) var(--primary-b));
+  border: none;
+  border-radius: 5px;
+  transition: background-color .3s ease-out;
+}
+
+.button:hover {
+  --primary-b: 33%;
+}
+
+.button-small {
+  --unit: .5rem;
+}
+
+.button-large {
+  --unit: 1.5rem;
+}
+
+/* card */
+.card {
+  /* --angle: 150deg;
+	background: linear-gradient(var(--angle), #235ad1, #23d1a8); */
+  display: grid;
+  place-content: center;
+  width: 400px;
+  height: 200px;
+  color: var(--text-color);
+  background-image: var(--primary-gradient);
+}
+
+/* inline styles */
+.wrapper {
+  --gap: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--item-width), 1fr));
+  gap: var(--gap);
+}
+
+.actions {
+  --size: 50px;
+
+  display: flex;
+  gap: calc(var(--size) / 5);
+}
+
+.actions-m {
+  --size: 70px;
+}
+
+.actions-item {
+  width: var(--size);
+  height: var(--size);
+  background-image: var(--primary-gradient);
+}
+
+.walk {
+  --scale-start: .3;
+  --scale-middle: 1;
+  --scale-end: .3;
+
+  animation: breath 2s infinite;
+}
+
+.run {
+  --scale-start: .8;
+  --scale-middle: 1.1;
+  --scale-end: .8;
+
+  animation: breath .5s infinite;
+}
+
+/* Animation Variables inside A @keyframes Rule */
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: #222;
+
+  --offset: 0;
+
+  transform: translateX(var(--offset));
+}
+
+.box-1 {
+  margin-bottom: 1rem;
+  background: #235ad1;
+  animation: moveBox 3s infinite alternate;
+}
+
+.box-2 {
+  background: #23d1a8;
+  animation: moveBox2 3s infinite alternate;
+}
