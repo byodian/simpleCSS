@@ -59,6 +59,7 @@ module.exports = {
       rules: {
         'no-invalid-position-at-import-rule': null,
         'scss/at-mixin-pattern': null,
+        'scss/at-if-no-null': null
       }
     }
   ]

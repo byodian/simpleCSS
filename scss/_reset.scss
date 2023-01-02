@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  @if $font-size-root != null {
+    font-size: var(--#{$prefix}root-font-size);
+  }
+
+  @if $enable-smooth-scroll {
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+// 1. Prevent adjustment of font size after orientation changes in iOS.
+
+body {
+  margin: 0;
+  font-family: var(--#{$prefix}body-font-family);
+  font-size: var(--#{$prefix}body-font-size);
+  font-weight: var(--#{$prefix}body-font-weight);
+  line-height: var(--#{$prefix}body-line-height);
+  color: var(--#{$prefix}body-color);
+  text-align: var(--#{$prefix}body-text-align);
+  text-size-adjust: 100%; // 1
+  background-color: var(--#{$prefix}body-bg);
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}

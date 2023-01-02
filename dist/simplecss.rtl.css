@@ -1,0 +1,44 @@
+/*!
+ * SimpleCSS  v0.0.1
+ * Copyright 2022 The SimpleCSS Authors
+ * Licensed under MIT
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--sc-body-font-family);
+  font-size: var(--sc-body-font-size);
+  font-weight: var(--sc-body-font-weight);
+  line-height: var(--sc-body-line-height);
+  color: var(--sc-body-color);
+  text-align: var(--sc-body-text-align);
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: var(--sc-body-bg);
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+.button {
+  margin: 10px;
+  color: #f0f;
+}
+/*# sourceMappingURL=simplecss.rtl.css.map */

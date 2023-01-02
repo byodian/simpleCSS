@@ -1,4 +1,6 @@
 @import "mixins/banner";
 @include scBanner("");
 
+@import "variables";
+@import "reset";
 @import "button";
