@@ -1,8 +1,9 @@
 const postCSSPlugin = require('eleventynano-plugin-postcss');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('images');
-  eleventyConfig.addPassthroughCopy('scripts');
+  eleventyConfig.addPassthroughCopy('docs/images');
+  eleventyConfig.addPassthroughCopy('docs/scripts');
+  eleventyConfig.addPassthroughCopy('dist');
 
   eleventyConfig.addLayoutAlias('base', 'base.html');
   eleventyConfig.addPlugin(postCSSPlugin);
@@ -11,8 +12,8 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
     dir: {
-      input: '.',
-      output: './_site'
+      input: './docs',
+      output: '_site'
     }
   }
 }

@@ -1,10 +1,6 @@
 /* stylelint-disable import-notation */
 
-@import "animations";
-
-@import "../../scss/variables";
-@import "../../scss/reset";
-@import "../../scss/button";
+@import "./_animations";
 
 :root {
   --text-color: #434343;

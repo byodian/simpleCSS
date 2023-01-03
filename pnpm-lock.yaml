@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@11ty/eleventy': ^1.0.2
+  '@csstools/postcss-sass': ^5.0.1
   autoprefixer: ^10.4.13
   clean-css-cli: ^5.6.1
   cross-env: ^7.0.3
@@ -13,6 +14,8 @@ specifiers:
   postcss: ^8.4.20
   postcss-cli: ^10.1.0
   postcss-import: ^15.1.0
+  postcss-nested: ^6.0.0
+  postcss-scss: ^4.0.6
   rtlcss: ^4.0.0
   sass: ^1.56.2
   stylelint: ^14.16.0
@@ -23,6 +26,7 @@ specifiers:
 
 devDependencies:
   '@11ty/eleventy': 1.0.2
+  '@csstools/postcss-sass': 5.0.1_postcss@8.4.20
   autoprefixer: 10.4.13_postcss@8.4.20
   clean-css-cli: 5.6.1
   cross-env: 7.0.3
@@ -34,6 +38,8 @@ devDependencies:
   postcss: 8.4.20
   postcss-cli: 10.1.0_postcss@8.4.20
   postcss-import: 15.1.0_postcss@8.4.20
+  postcss-nested: 6.0.0_postcss@8.4.20
+  postcss-scss: 4.0.6_postcss@8.4.20
   rtlcss: 4.0.0
   sass: 1.56.2
   stylelint: 14.16.0
@@ -141,6 +147,23 @@ packages:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
+    dev: true
+
+  /@csstools/postcss-sass/5.0.1_postcss@8.4.20:
+    resolution: {integrity: sha512-GgQAOe6KfABEIHGh9KFqn/7sX2Dmx554PElvyhRFNADo2QV2N/CzlS+QHrrJmVJzaBn829f4JFcOd67mmYb5Eg==}
+    engines: {node: ^12 || ^14 || >=16}
+    peerDependencies:
+      postcss: ^8.4.6
+    dependencies:
+      '@csstools/sass-import-resolve': 1.0.0
+      postcss: 8.4.20
+      sass: 1.56.2
+      source-map: 0.7.4
+    dev: true
+
+  /@csstools/sass-import-resolve/1.0.0:
+    resolution: {integrity: sha512-pH4KCsbtBLLe7eqUrw8brcuFO8IZlN36JjdKlOublibVdAIPHCzEnpBWOVUXK5sCf+DpBi8ZtuWtjF0srybdeA==}
+    engines: {node: '>=4.0.0'}
     dev: true
 
   /@csstools/selector-specificity/2.0.2_2xshye3abirqjlplmebvmaxyna:
@@ -2754,6 +2777,16 @@ packages:
       postcss-selector-parser: 6.0.11
     dev: true
 
+  /postcss-nested/6.0.0_postcss@8.4.20:
+    resolution: {integrity: sha512-0DkamqrPcmkBDsLn+vQDIrtkSbNkv5AD/M322ySo9kqFkCIYklym2xEmWkwo+Y3/qZo34tzEPNUw4y7yMCdv5w==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.2.14
+    dependencies:
+      postcss: 8.4.20
+      postcss-selector-parser: 6.0.11
+    dev: true
+
   /postcss-normalize-charset/5.1.0_postcss@8.4.20:
     resolution: {integrity: sha512-mSgUJ+pd/ldRGVx26p2wz9dNZ7ji6Pn8VWBajMXFf8jk7vUoSrZ2lt/wZR7DtlZYKesmZI680qjr2CeFF2fbUg==}
     engines: {node: ^10 || ^12 || >=14.0}
@@ -3534,6 +3567,11 @@ packages:
   /source-map/0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /source-map/0.7.4:
+    resolution: {integrity: sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==}
+    engines: {node: '>= 8'}
     dev: true
 
   /spdx-correct/3.1.1:
