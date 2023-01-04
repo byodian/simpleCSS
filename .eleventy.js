@@ -6,7 +6,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('dist');
 
   eleventyConfig.addLayoutAlias('base', 'base.html');
-  eleventyConfig.addPlugin(postCSSPlugin);
+  eleventyConfig.addPlugin(postCSSPlugin, {
+    format: 'scss'
+  });
+
+  eleventyConfig.addWatchTarget('./dist/')
 
   return {
     htmlTemplateEngine: 'njk',

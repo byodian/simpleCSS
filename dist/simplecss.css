@@ -9,12 +9,6 @@
   box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-}
-
 body {
   margin: 0;
   font-family: var(--sc-body-font-family);
@@ -38,8 +32,14 @@ button:focus:not(:focus-visible) {
 }
 
 .button {
-  margin: 10px;
+  margin: 20px;
   color: #f0f;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
 }
 
 /*# sourceMappingURL=simplecss.css.map */
