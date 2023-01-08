@@ -1,11 +1,11 @@
 'use strict'
 
 const cssnanoConfig = {
-  preset: 'default'
+  preset: 'default',
 }
 
-module.exports = context => {
-  const scss = context.file.extname === '.scss';
+module.exports = (context) => {
+  const scss = context.file.extname === '.scss'
   const docEnv = context.env === 'DOCS'
 
   return {
@@ -18,6 +18,6 @@ module.exports = context => {
       'postcss-nested': docEnv,
       'cssnano': context.env === 'production' ? cssnanoConfig : false,
       'rtlcss': context.env === 'RTL',
-    }
+    },
   }
 }
