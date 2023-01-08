@@ -3,6 +3,45 @@
  * Copyright 2022 The SimpleCSS Authors
  * Licensed under MIT
 */
+code {
+  padding: 0.25em;
+  line-height: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.button {
+  border-radius: 10px;
+  padding: 15px;
+}
+
+:root,
+[data-sc-theme=light] {
+  --sc-blue: #2461e3;
+  --sc-indigo: #4f46e3;
+  --sc-purple: #9333e5;
+  --sc-pink: #d42694;
+  --sc-red: #e11d48;
+  --sc-orange: #fa7b14;
+  --sc-yellow: #ffd014;
+  --sc-green: #168a40;
+  --sc-teal: #0f766e;
+  --sc-cyan: #0e7490;
+  --sc-primary: #2461e3;
+  --sc-secondary: #57595b;
+  --sc-success: #168a40;
+  --sc-info: #0e7490;
+  --sc-warning: #ffd014;
+  --sc-danger: #e11d48;
+  --sc-light: #57595b;
+  --sc-dark: #57595b;
+  --sc-custom-colors: #900;
+}
+
 *,
 *::before,
 *::after {
@@ -32,8 +71,8 @@ button:focus:not(:focus-visible) {
 }
 
 .button {
-  margin: 20px;
-  color: #f0f;
+  margin: 20px 10px 5px 30px;
+  color: #2461e3;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -3,3 +3,62 @@ $prefix: sc- !default;
 // options
 $enable-smooth-scroll: true !default;
 $font-size-root: null !default;
+
+// fusv-disable
+$white: #fff !default;
+$gray-100: #57595b !default;
+$gray-200: #57595b !default;
+$gray-300: #57595b !default;
+$gray-400: #57595b !default;
+$gray-500: #57595b !default;
+$gray-600: #57595b !default;
+$gray-700: #57595b !default;
+$gray-800: #57595b !default;
+$gray-900: #57595b !default;
+$black: #1e2124 !default;
+// fusv-enable
+
+$blue:     #2461e3 !default;
+$indigo:   #4f46e3 !default;
+$purple:   #9333e5 !default;
+$pink:     #d42694 !default;
+$red:      #e11d48 !default;
+$orange:   #fa7b14 !default;
+$yellow:   #ffd014 !default;
+$green:    #168a40 !default;
+$teal:     #0f766e !default;
+$cyan:     #0e7490 !default;
+
+$colors: (
+  "blue":   $blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink":   $pink,
+  "red":    $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green":  $green,
+  "teal":   $teal,
+  "cyan":   $cyan
+) !default;
+
+// theme-color-variables
+$primary:   $blue !default;
+$secondary: $gray-600 !default;
+$success:   $green !default;
+$info:      $cyan !default;
+$warning:   $yellow !default;
+$danger:    $red !default;
+$light:     $gray-100 !default;
+$dark:      $gray-900 !default;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+) !default;

@@ -1,6 +1,35 @@
+@use "sass:map";
+@use "code" as code;
+@use "bootstrap" as bootstrap;
+
 @import "mixins/banner";
 @include scBanner("");
 
+code.$radius: 10px;
+@debug code.$radius;
+
+code {
+  padding: .25em;
+  line-height: 0;
+}
+
+li {
+  @include bootstrap.list-reset;
+}
+
+.button {
+  @include code.rounded;
+  padding: 5px + code.$radius;
+}
+
+$custom-colors: (
+  "custom-colors": #900,
+);
+
 @import "variables";
+$theme-colors: map.merge($theme-colors, $custom-colors);
+@debug $theme-colors;
+
+@import "root";
 @import "reset";
 @import "button";
